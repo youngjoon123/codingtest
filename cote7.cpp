@@ -1,21 +1,20 @@
-#include <iostream>
-
-int main() {
-
-	int i,cnt=0;
-
-	char a[100];
-	scanf("%s", &a);
-	
-	for (i = 0; a[i] != '\0'; i++) {
-		if (a[i] == '(') cnt++;
-		else if(a[i] == ')') cnt--;
-		if (cnt < 0) break;
+#include<stdio.h>
+using namespace std;
+int main(){
+	//freopen("input.txt", "rt", stdin);
+	char a[101], b[101];
+	int i, p=0;
+	gets_s(a);
+	for(i=0; a[i]!='\0'; i++){
+		if(a[i]!=' '){
+			if(a[i]>=65 && a[i]<=90){
+				b[p++]=a[i]+32;
+			}
+			else b[p++]=a[i];
+		}
 	}
-	//printf("%d", cnt);
-	if (cnt == 0) printf("YES");
-	else printf("NO");
-
+	b[p]='\0';
+	printf("%s\n", b);	
 	return 0;
-
 }
+	
