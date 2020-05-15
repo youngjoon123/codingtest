@@ -7,7 +7,7 @@ int main(){
 	scanf("%d", &n);
 	for(i=1; i<=n; i++){
 		for(j=i; j<=n; j=j+i){
-			cnt[j]++;
+			cnt[j]++; // 배수마다 +1 (약수의 갯수 +1)
 		}
 	}
 	for(i=1; i<=n; i++){
