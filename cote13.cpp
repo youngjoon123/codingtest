@@ -5,7 +5,7 @@ int main() {
 	int ch[10];
 	int a[100];
 	int max=0, x, res;
-	scanf("&s", a);
+	scanf("&s", &a);
 
 	for (int i = 0; a[i] != '\0'; i++) {
 		x = a[i] - 48;
